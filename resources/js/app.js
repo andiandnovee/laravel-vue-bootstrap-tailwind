@@ -15,8 +15,13 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
+// Komponen default
 import ExampleComponent from './components/ExampleComponent.vue';
 app.component('example-component', ExampleComponent);
+
+// Komponen Sidebar baru
+import Sidebar from './components/Sidebar.vue';
+app.component('sidebar', Sidebar);
 
 /**
  * The following block of code may be used to automatically register your
