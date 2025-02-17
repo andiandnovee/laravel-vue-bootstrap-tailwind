@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
-   
+   <h1 class="text-center">Welcome to the Dashboard</h1>
+   <example-component></example-component>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -20,5 +22,7 @@
             </div>
         </div>
     </div>
+
+   
 </div>
 @endsection

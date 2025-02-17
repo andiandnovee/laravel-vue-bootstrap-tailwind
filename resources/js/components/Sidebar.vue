@@ -12,10 +12,11 @@ const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
 };
 </script>
+
 <template>
   <div class="sidebar-container">
     <!-- Toggle Button untuk Mobile -->
-    <button class="btn btn-toggle d-lg-none" @click="toggleSidebar">
+    <button class="btn btn-toggle d-lg-none" @click="toggleSidebar" aria-expanded="false">
       <i class="fas fa-bars"></i>
     </button>
 
@@ -35,11 +36,11 @@ const toggleDropdown = () => {
           </li>
 
           <!-- Dropdown Menu -->
-          <li class="nav-item dropdown" @click="toggleDropdown">
-            <a class="nav-link dropdown-toggle">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" @click="toggleDropdown" aria-expanded="false">
               <i class="fas fa-users-cog mr-2"></i> User Management
             </a>
-            <ul class="dropdown-menu" :class="{ show: dropdownOpen }">
+            <ul class="dropdown-menu" v-if="dropdownOpen">
               <li><router-link to="/users" class="dropdown-item">Users</router-link></li>
               <li><router-link to="/roles" class="dropdown-item">Roles</router-link></li>
             </ul>
@@ -76,21 +77,8 @@ const toggleDropdown = () => {
 
 <script>
 export default {
-  data() {
-    return {
-      isCollapsed: false,
-      dropdownOpen: false
-    }
-  },
-  methods: {
-    toggleSidebar() {
-      this.isCollapsed = !this.isCollapsed
-    },
-    toggleDropdown() {
-      this.dropdownOpen = !this.dropdownOpen
-    }
-  }
-}
+  name: 'Sidebar',
+};
 </script>
 
 <style scoped>

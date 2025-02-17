@@ -22,6 +22,7 @@
 </head>
 <body>
     <div id="app">
+        <sidebar></sidebar> <!-- Add this line back -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -80,19 +81,20 @@
             <div class="row">
                 <!-- Sidebar -->
                 <div class="col-lg-3 bg-light p-3">
-                    <sidebar></sidebar>
+               
                 </div>
                 
                 <!-- Main Content -->
                 <main class="col-lg-9 py-4">
                     @yield('content')
+                 
                 </main>
             </div>
         </div>
     </div>
 
+    <!-- Script untuk Vue dan Bootstrap -->
     <script src="{{ mix('js/app.js') }}"></script>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
