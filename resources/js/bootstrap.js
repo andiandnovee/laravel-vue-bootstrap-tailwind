@@ -13,14 +13,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 // resources/js/bootstrap.js
 
-window._ = require('lodash');
+import _ from 'lodash';
 
-try {
-    window.Popper = require('@popperjs/core').default;
-    window.$ = window.jQuery = require('jquery');
+window._ = _;
 
-    require('bootstrap');
-} catch (e) {}
+
+    import * as Popper from '@popperjs/core';
+import $ from 'jquery';
+import 'bootstrap';
+
+window.Popper = Popper;
+window.$ = window.jQuery = $;
+
+
 
 // ...
 
