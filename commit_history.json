@@ -1,0 +1,6 @@
+﻿[
+{hash: 2aa7e85, author: andiandnovee, date: 2025-02-17, message: menhabiskan sisa laravel-mix, configurasi vite dgn benar , dan mengganti require() ke import , karena vite menggunakan EMS}
+{hash: d65caf1, author: andiandnovee, date: 2025-02-17, message: remove laravel-mix copilot suggest, as its can collides with vite}
+{hash: 81acea2, author: andiandnovee, date: 2025-02-11, message: script menambahkan sidebar vue. first attempt}
+{hash: 4f8567e, author: andiandnovee, date: 2025-02-11, message: Laravel + vue + bootstrap + tailwind +webpack}
+]
